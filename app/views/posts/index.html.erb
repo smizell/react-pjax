@@ -1,0 +1,9 @@
+<h1>Blog Posts</h1>
+
+<div>
+  <% @posts.each do |post| %>
+    <%= render post %>
+  <% end %>
+</div>
+
+<%= render "form", post: Post.new %>

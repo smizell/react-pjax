@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ReactPjax</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <script src="http://fb.me/react-with-addons-0.8.0.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="data">
+  <%= yield %>
+</div>
+
+</body>
+</html>
