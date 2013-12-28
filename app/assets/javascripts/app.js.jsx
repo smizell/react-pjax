@@ -70,12 +70,12 @@ var Blog = React.createClass({
   // code. Simply fill out the form that was returned in the response
   // and submit it. If there are errors, you would handle them from
   // the response.
-  handleSubmit: function() {
+  handleSubmit: function(e) {
     var form = $('#data').find('.new_post');
     form.find('#post_title').val(this.refs.headline.getDOMNode().value);
     form.find('#post_body').val(this.refs.text.getDOMNode().value);
     form.submit();
-    return false;
+    e.preventDefault();
   },
   handleNewClick: function(e) {
     // Toggles new clicks
@@ -134,7 +134,7 @@ var BlogPosting = React.createClass({
   // After we change the state, we then submit the form.
   // If you were handling errors, you'd want to probably
   // deal with this differently.
-  handleSubmit: function() {
+  handleSubmit: function(e) {
     var _this = this;
     this.setState({
       editing: false,
@@ -150,12 +150,12 @@ var BlogPosting = React.createClass({
     form.find('#post_title').val(this.refs.headline.getDOMNode().value);
     form.find('#post_body').val(this.refs.text.getDOMNode().value);
     form.submit();
-    return false;
+    e.preventDefault();
   },
-  handleEditClick: function() {
+  handleEditClick: function(e) {
     this.state.editing = !this.state.editing;
     this.setState(this.state);
-    return false;
+    e.preventDefault();
   },
   // No URL here and no handling of application state. We just follow
   // the URLs, and since it is pjax, the page doesn't get reloaded.
