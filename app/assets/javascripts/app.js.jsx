@@ -1,6 +1,13 @@
 /** @jsx React.DOM */
 
 var Utils = {
+  // data - Data is derived from the Schema.org items in the
+  // data HTML. This data is then used as the state of the
+  // application.
+  //
+  // resourceName - This is used to decide how to display the
+  // data in the response. Instead of keying off the URLs, I use
+  // this to key off the resource I'm viewing.
   getData: function(data) {
     return {
       url: window.location.pathname,
