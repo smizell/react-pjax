@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a proof of concept of an idea where I use HTML as the content type (instead of JSON) and pjax for routing.
+This provides several key benefits.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. API is browseable since it's HTML
+2. API HTML is separate from UI HTML
+3. API is useable with <noscript>
+4. Entire API could change completely from a URL structure perspective and app would still work
+5. No need to manage separate JSON API
+6. Developers manage HTML representations, Designers represent UI HTML

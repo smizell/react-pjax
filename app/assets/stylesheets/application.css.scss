@@ -60,15 +60,15 @@ textarea {
   background-color: #5cb85c;
 }
 
-.blog-posting-edit {
+.blog-posting-edit, .blog-posting-new {
   display: none;
 }
 
 .editing {
-  .blog-posting {
+  .blog-posting, .blog-postings {
     display: none; 
   }
-  .blog-posting-edit {
+  .blog-posting-edit, .blog-posting-new {
     display: block;
   }
 }
