@@ -1,10 +1,12 @@
 /** @jsx React.DOM */
 
-function getData(data) {
-  return {
-    url: window.location.pathname,
-    data: JSON.parse($.microdata.json(data.items())),
-    resourceName: $('meta[name="resource_name"]').attr('value')
+var Utils = {
+  getData: function(data) {
+    return {
+      url: window.location.pathname,
+      data: JSON.parse($.microdata.json(data.items())),
+      resourceName: $('meta[name="resource_name"]').attr('value')
+    }
   }
 }
 
@@ -13,7 +15,7 @@ var App = React.createClass({
   // that is sent in the response. From here on, we will read the
   // state of the app from events.
   getInitialState: function() {
-    return {data: getData(this.props.dataContainer)};
+    return {data: Utils.getData(this.props.dataContainer)};
   },
   componentDidMount: function() {
     var _this = this;
@@ -30,7 +32,7 @@ var App = React.createClass({
   
     // When pjax is complete, set the state to the new data
     $(document).on('pjax:complete', function() {
-      _this.setState({data: getData(_this.props.dataContainer)});
+      _this.setState({data: Utils.getData(_this.props.dataContainer)});
       console.log(_this.state);
     })
     
@@ -40,7 +42,7 @@ var App = React.createClass({
     // though this is much different than how we use the web today
     // where POST requests are non-idempotent.
     window.addEventListener("popstate", function(e) {
-      _this.setState({data: getData(_this.props.dataContainer)});
+      _this.setState({data: Utils.getData(_this.props.dataContainer)});
       console.log(_this.state);
     });
   },
