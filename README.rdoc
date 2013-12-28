@@ -9,4 +9,4 @@ This provides several key benefits.
 4. API is crawlable by crawlers. No need to render the UI client side with a headless browser.
 4. Entire API could change completely from a URL structure perspective and app would still work
 5. No need to manage separate JSON API
-6. Developers manage HTML representations, Designers represent UI HTML
+6. Developers manage HTML representations, Designers manage UI HTML
