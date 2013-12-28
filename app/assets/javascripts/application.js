@@ -15,4 +15,4 @@
 //= require json2
 //= require jquery.microdata
 //= require jquery.microdata-json
-//= require app
+//= require blog_app

@@ -2,6 +2,10 @@
 
 <%= render @post %>
 
+<h2>Edit Post</h2>
 <%= render "form", post: @post %>
+
+<h2>Delete Post</h2>
+<%= render "form_delete", post: @post %>
 
 <p><%= link_to 'Post listing', posts_path, class: "back" %></p>

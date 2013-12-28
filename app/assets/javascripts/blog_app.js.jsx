@@ -164,6 +164,11 @@ var BlogPosting = React.createClass({
     this.setState(this.state);
     e.preventDefault();
   },
+  handleDeleteClick: function(e) {
+    var form = $('#data').find('.delete_post');
+    form.submit();
+    e.preventDefault();
+  },
   // No URL here and no handling of application state. We just follow
   // the URLs, and since it is pjax, the page doesn't get reloaded.
   handleBackClick: function() {
@@ -175,7 +180,10 @@ var BlogPosting = React.createClass({
       <div className={React.addons.classSet({editing: this.state.editing})}>
         <div className="blog-posting">
           <h1>{blogPosting.headline}</h1>
-          <p><a href="#" onClick={this.handleEditClick}>Edit</a></p>
+          <p>
+            <a href="#" onClick={this.handleEditClick}>Edit</a> |
+            <a href="#" onClick={this.handleDeleteClick}>Delete</a>
+          </p>
           <div dangerouslySetInnerHTML={{__html: blogPosting.body}} />
           <p><a href="#back" onClick={this.handleBackClick}>Back to postings list</a></p>
         </div>
@@ -217,7 +225,25 @@ $(document).ready(function() {
   $('#data').wrap('<div class="grid-40 data-container"></div>');
   $('#app').wrap('<div class="grid-60"></div>');
   $('#data').before('<h1 class="title title-data">HTML Representation</h1>');
+  
+  // Just some info the clarify what's going on with the data section
+  // Again, this is just here for the sake of the exampel. It wouldn't 
+  // normally be here.
+  $('#data').before(
+    '<p class="info data-info">'+
+    'This would not be here normally, but I am just displaying it so you can see the behind-the-scenes. '+
+    'This is the raw representation of the resource. Click the <a href="#" class="toggle-html">toggle button</a> '+
+    'at the top to hide to get full effect.'+
+    '</p>'
+  );
+  
+  // Extra info to explain the UI section of the app
   $('#app').before('<h1 class="title title-app">HTML UI</h1>');
+  $('#app').before(
+    '<p class="info app-info">'+
+    'This section is the UI area. This is what the user would see if they have a Javascript-enabled browser. '+
+    '</p>'
+  );
   
   // Toggle button for showing/hiding the HTML representation
   $('body').prepend('<div class="nav"><a href="#" class="toggle-html">Toggle HTML Representation</a></div>');

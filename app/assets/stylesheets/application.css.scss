@@ -38,7 +38,7 @@ body {
 
 .data-container {
   // Hide by default
-  display: none;
+  // display: none;
 }
 
 textarea {
@@ -54,6 +54,23 @@ textarea {
 
 .title-data {
   background-color: #428bca;
+}
+
+.info {
+  margin: 0;
+  padding: 10px;
+  background-color: #eee;
+  color: #555;
+}
+
+.data-info {
+  border: 2px solid #428bca;
+  border-width: 0 2px;
+}
+
+.app-info {
+  border: 2px solid #5cb85c;
+  border-width: 0 2px; 
 }
 
 .title-app {
