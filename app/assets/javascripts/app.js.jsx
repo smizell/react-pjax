@@ -34,7 +34,11 @@ var App = React.createClass({
       console.log(_this.state);
     })
     
-    // This will set the state on back and forward clicks
+    // This will set the state on back and forward in the browser
+    // You could maintain a history of the page state and allow the
+    // users to go back and forth through the history of the state,
+    // though this is much different than how we use the web today
+    // where POST requests are non-idempotent.
     window.addEventListener("popstate", function(e) {
       _this.setState({data: getData(_this.props.dataContainer)});
       console.log(_this.state);
