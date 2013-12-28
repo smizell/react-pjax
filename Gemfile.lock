@@ -109,7 +109,6 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unsemantic_rails (0.0.2)
 
 PLATFORMS
   ruby
@@ -125,4 +124,3 @@ DEPENDENCIES
   sdoc
   sqlite3
   uglifier (>= 1.3.0)
-  unsemantic_rails
