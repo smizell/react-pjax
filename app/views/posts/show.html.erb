@@ -1,5 +1,7 @@
+<%= render "meta" %>
+
 <%= render @post %>
 
 <%= render "form", post: @post %>
 
-<p><%= link_to 'Back', posts_path %></p>
+<p><%= link_to 'Post listing', posts_path, class: "back" %></p>

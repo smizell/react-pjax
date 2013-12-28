@@ -3,15 +3,19 @@
 <head>
   <title>ReactPjax</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
   <script src="http://fb.me/react-with-addons-0.8.0.js"></script>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div id="data">
-  <%= yield %>
-</div>
+  <div class="container">
+    <div id="data">
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>

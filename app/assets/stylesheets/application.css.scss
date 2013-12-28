@@ -1,0 +1,79 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import "reset";
+@import "text";
+@import "unsemantic";
+
+html {
+  margin: 30px;
+}
+
+body {
+  @extend .grid-container;
+}
+
+.nav {
+  @extend .grid-100;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #eee;
+}
+
+#data {
+  padding: 15px;
+  border: 2px solid #428bca;
+}
+
+.data-container {
+  // Hide by default
+  display: none;
+}
+
+textarea {
+  width: 90%;
+  height: 200px;
+}
+
+.title {
+  margin: 0;
+  padding:10px;
+  color: #fff;
+}
+
+.title-data {
+  background-color: #428bca;
+}
+
+.title-app {
+  background-color: #5cb85c;
+}
+
+.blog-posting-edit {
+  display: none;
+}
+
+.editing {
+  .blog-posting {
+    display: none; 
+  }
+  .blog-posting-edit {
+    display: block;
+  }
+}
+
+#app {
+  padding: 15px;
+  border: 2px solid #5cb85c;
+}

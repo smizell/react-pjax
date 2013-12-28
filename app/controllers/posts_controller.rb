@@ -4,12 +4,14 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    @resource_name = "Blog"
     @posts = Post.all
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @resource_name = "BlogPosting"
   end
 
   # GET /posts/new
@@ -24,6 +26,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    @resource_name = "BlogPosting"
     @post = Post.new(post_params)
 
     respond_to do |format|
@@ -40,6 +43,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    @resource_name = "BlogPosting"
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
