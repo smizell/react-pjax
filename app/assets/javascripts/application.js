@@ -15,5 +15,4 @@
 //= require json2
 //= require jquery.microdata
 //= require jquery.microdata-json
-//= require_directory ./components
 //= require app
